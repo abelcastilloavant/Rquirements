@@ -1,0 +1,18 @@
+Package: lockbox2
+Type: Package
+Title: lockbox2 (http://github.com/abelcastilloavant/lockbox2)
+Description: Package dependency management with automation and introspection.
+Version: 0.0.1
+Author: Abel Castillo <abelcastillomath@gmail.com>
+Maintainer: Abel Castillo <abelcastillomath@gmail.com>
+Authors@R: c(person("Abel", "Castillo",
+    email = "abelcastillomath@gmail.com", role = c("aut", "cre")))
+Depends:
+    R (>= 3.0.1)
+License: MIT + file LICENSE
+LazyData: true
+Imports:
+Suggests:
+    testthat
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 5.0.0
