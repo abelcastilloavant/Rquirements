@@ -19,7 +19,7 @@ devtools::install_github("abelcastilloavant/lockbox2")
 
 This project is licensed under the MIT License:
 
-lopyright (c) 2018 Abel Castillo
+Copyright (c) 2018 Abel Castillo
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
