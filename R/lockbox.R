@@ -1,7 +1,7 @@
 lockbox <- function(requirements_file, lockfile_path, save_tree = TRUE) {
   message("reading requirements file and existing lockfile")
-  requirements <- read_yaml(requirements_file)
-  lockfile     <- read_yaml(lockfile_path)
+  requirements <- read_list(requirements_file)
+  lockfile     <- read_list(lockfile_path)
 
   message("Checking if lockfile is up to date")
   lockbox_hash <- calculate_lockbox_hash(requirements)
