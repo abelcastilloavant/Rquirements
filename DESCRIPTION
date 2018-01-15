@@ -12,6 +12,7 @@ Depends:
 License: MIT + file LICENSE
 LazyData: true
 Imports:
+  digest
 Suggests:
     testthat
 Roxygen: list(wrap = FALSE)
