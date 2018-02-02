@@ -1,8 +1,8 @@
-Package: lockbox2
+Package: Rquirements
 Type: Package
-Title: lockbox2 (http://github.com/abelcastilloavant/lockbox2)
+Title: Rquirements (http://github.com/abelcastilloavant/Rquirements)
 Description: Package dependency management with automation and introspection.
-Version: 0.0.1
+Version: 0.0.1.9001
 Author: Abel Castillo <abelcastillomath@gmail.com>
 Maintainer: Abel Castillo <abelcastillomath@gmail.com>
 Authors@R: c(person("Abel", "Castillo",
@@ -12,6 +12,7 @@ Depends:
 License: MIT + file LICENSE
 LazyData: true
 Imports:
+  yaml
 Suggests:
     testthat
 Roxygen: list(wrap = FALSE)

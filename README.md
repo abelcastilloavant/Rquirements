@@ -1,4 +1,4 @@
-## lockbox2 - like lockbox, but with introspection
+## Rquirements - like lockbox, but with introspection
 
 
 There's this amazing R package called [lockbox](https://github.com/robertzk/lockbox/), that
@@ -6,16 +6,36 @@ handles dependency management for you in a hassle-free way. This package is a co
 of lockbox, with additional tooling that allows for introspection into the dependency tree.
 
 
-## Installation and Use
+### Installation
 
 This package is not available on CRAN. To install this package, use devtools:
 ```r
 if (!require(devtools)) { install.packages("devtools") }
-devtools::install_github("abelcastilloavant/lockbox2")
+devtools::install_github("abelcastilloavant/Rquirements")
 ```
 
+### Use
 
-## License
+To use Rquirements, you first want to write a reqsfile. This will contain a list of all of the R
+packages you need in your R session, along with versions and additional details needed to download
+and install the package and its dependencies.
+
+(TODO: add examples of reqfile entries)
+
+
+### Mechanics
+
+The main function in the package is `install_reqs`, which takes your reqsfile and installs all
+packages listed there, along with its dependencies.
+
+To do this, the first thing `install_reqs` does is take your reqsfile and write a lockfile. In
+analogy with Gemfiles in Ruby, the reqsfile is a list of packages that you need, and the lockfile
+is the full list of packages needed to satisfy all dependencies of all packages in the reqsfile,
+along with the reqsfile itself, topologically sorted by dependency.
+
+(TODO: add more details as they are developed)
+
+### License
 
 This project is licensed under the MIT License:
 
