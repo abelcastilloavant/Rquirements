@@ -5,6 +5,7 @@ There's this amazing R package called [lockbox](https://github.com/robertzk/lock
 handles dependency management for you in a hassle-free way. This package is a complete rewrite
 of lockbox, with additional tooling that allows for introspection into the dependency tree.
 
+This package is still under development and does not work yet!
 
 ### Installation
 
