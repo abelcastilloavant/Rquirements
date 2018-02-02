@@ -1,6 +1,6 @@
-Package: lockbox2
+Package: Rquirements
 Type: Package
-Title: lockbox2 (http://github.com/abelcastilloavant/lockbox2)
+Title: Rquirements (http://github.com/abelcastilloavant/Rquirements)
 Description: Package dependency management with automation and introspection.
 Version: 0.0.1.9001
 Author: Abel Castillo <abelcastillomath@gmail.com>
