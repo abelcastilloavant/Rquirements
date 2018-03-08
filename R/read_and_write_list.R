@@ -5,11 +5,11 @@ FILE_FORMATS$yaml = list(
   write = function(lst, filename) { yaml::write_yaml(lst, filename) }
 )
 
-read_list <- function(filename, format = getOption("lockbox2.file_format", "yaml")) {
+read_list <- function(filename, format = getOption("rquirements.file_format", "yaml")) {
   FILE_FORMATS[[format]]$read(filename)
 }
 
-write_list <- function(lst, filename, format = getOption("lockbox2.file_format", "yaml")) {
+write_list <- function(lst, filename, format = getOption("rquirements.file_format", "yaml")) {
   FILE_FORMATS[[format]]$write(lst, filename)
 }
 
