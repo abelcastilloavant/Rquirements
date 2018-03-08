@@ -26,13 +26,15 @@ and install the package and its dependencies.
 
 ### Mechanics
 
-The main function in the package is `install_reqs`, which takes your reqsfile and installs all
+The main function in the package is `install_reqs`, which takes your reqfile and installs all
 packages listed there, along with its dependencies.
 
-To do this, the first thing `install_reqs` does is take your reqsfile and write a lockfile. In
-analogy with Gemfiles in Ruby, the reqsfile is a list of packages that you need, and the lockfile
-is the full list of packages needed to satisfy all dependencies of all packages in the reqsfile,
-along with the reqsfile itself, topologically sorted by dependency.
+To do this, the first thing `install_reqs` does is take your reqfile and write a lockfile. In
+analogy with Gemfiles in Ruby, the reqfile is a list of packages that you need, and the lockfile
+is the full list of packages needed to satisfy all dependencies of all packages in the reqfile,
+along with those listed in the reqfile, topologically sorted by dependency.
+(lockbox package users: Rquirements' "reqfile" is lockbox's "lockfile")
+(Rubyists: Rquirements' "reqfile" is Ruby's "Gemfile", Rquirements' "lockfile" is Ruby's "Gemfile.lock")
 
 (TODO: add more details as they are developed)
 
