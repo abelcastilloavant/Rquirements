@@ -64,4 +64,4 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Acknowledgements
 
 This project draws heavily on ideas from [lockbox](https://github.com/robertzk/lockbox/),
-thanks to Robert Krzyzanowski for his work on that package.
+thanks to Robert Krzyzanowski and Dave Boren for their work on that package.
