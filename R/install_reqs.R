@@ -1,6 +1,6 @@
-install_reqs <- function(reqsfile = default_reqsfile_location(), lockfile = default_lockfile_location(), save_tree = TRUE) {
-  message("reading reqsfile and lockfile")
-  requirements <- read_list(reqsfile)
+install_reqs <- function(reqfile = default_reqfile_location(), lockfile = default_lockfile_location(), save_tree = TRUE) {
+  message("reading reqfile and lockfile")
+  requirements <- read_list(reqfile)
   lockfile     <- read_list(lockfile)
 
   if (!`packages_already_installed?`(requirements)) {
