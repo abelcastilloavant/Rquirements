@@ -1,4 +1,4 @@
-default_reqsfile_location <- function() {
+default_reqfile_location <- function() {
 }
 
 default_lockfile_location <- function() {
