@@ -12,5 +12,5 @@ load_requirements <- function(reqsfile) {
     register_lockfile(lockfile)
   }
 
-  set_session_package_versions(lockfile)
+  `set_session_package_versions!`(lockfile)
 }
