@@ -1,3 +1,5 @@
+#TODO: DRY up registry code paths for reqs, lockfiles, and dep_trees.
+
 register_requirements <- function(reqs, lockfile) {
   write_list(lockfile, reqs_registry_filename(reqs))
 }
