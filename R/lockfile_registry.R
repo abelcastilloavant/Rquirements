@@ -18,5 +18,6 @@ reqs_registry_path <- function() {
 }
 
 digest_reqs <- memoise::memoise(function(lockfile) {
-  digest::digest(lapply(lockfile, `[`, c("name", "version")))
+  lockfile$installation_order <- lapply(lockfile$installation_order, `[`, c("name", "version"))
+  digest::digest(lockfile[c("reqs_registry_key", "installation_order")])
 })
