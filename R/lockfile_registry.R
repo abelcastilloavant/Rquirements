@@ -17,7 +17,7 @@ reqs_registry_path <- function() {
   ensure_directory_exists(file.path(rquirements_registry_path(), "lockfile"))
 }
 
-digest_reqs <- memoise::memoise(function(lockfile) {
+digest_lockfile <- function(lockfile) {
   lockfile$installation_order <- lapply(lockfile$installation_order, `[`, c("name", "version"))
   digest::digest(lockfile[c("reqs_registry_key", "installation_order")])
-})
+}
