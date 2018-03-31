@@ -6,7 +6,11 @@ generate_lockfile <- function(reqs) {
     installation_order = dep_tree$installation_order(),
     registry_key       = dep_tree$registry_key()
   )
-  register_dep_tree(dep_tree)
+
+  if (save_dep_trees()) {
+    DEP_TREE_REGISTRY$put(dep_tree, dep_tree$reqs())
+  }
+
   lockfile
 }
 
