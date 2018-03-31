@@ -31,3 +31,7 @@ ensure_directory_exists <- memoise::memoise(function(directory) {
   directory
 })
 
+save_dep_trees <- function() {
+  opt <- get_option("rquirements.save_dep_trees")
+  isTRUE(opt) %||% identical(opt, "TRUE")
+}

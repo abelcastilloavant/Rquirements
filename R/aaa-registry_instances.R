@@ -1,3 +1,5 @@
+# we need memoising out here because we want to cache values across different
+# instances of the class
 reqs_registry_filename <- memoise::memoise(function(reqs) {
   digest::digest(lapply(reqs, `[`, c("name", "version")))
 })
@@ -19,7 +21,6 @@ LOCKFILE_REGISTRY <- ObjectRegistry$new(
   }
 )
 
-
 DEP_TREE_REGISTRY <- ObjectRegistry$new(
   object_type = "dep_tree",
   read_fn     = readRDS,
@@ -28,4 +29,3 @@ DEP_TREE_REGISTRY <- ObjectRegistry$new(
     reqs_registry_filename(dep_tree$reqs())
   }
 )
-
