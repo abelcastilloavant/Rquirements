@@ -8,8 +8,8 @@ load_requirements <- function(reqsfile) {
   }
 
   if (!`lockfile_registered?`(lockfile)) {
-    install_packages_into_lockbox(lockfile)
-    register_lockfile(lockfile)
+    install_status <- install_packages_into_lockbox(lockfile)
+    register_lockfile(lockfile, install_status)
   }
 
   `set_session_package_versions!`(lockfile)

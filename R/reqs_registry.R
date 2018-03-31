@@ -15,7 +15,7 @@ reqs_registry_key <- function(reqs) {
 }
 
 reqs_registry_path <- function() {
-  ensure_directory_exists(file.path(rquirements_registry_path(), "registry"))
+  ensure_directory_exists(file.path(rquirements_registry_path(), "reqs"))
 }
 
 digest_reqs <- memoise::memoise(function(reqs) {
