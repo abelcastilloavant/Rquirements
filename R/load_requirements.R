@@ -1,7 +1,7 @@
 load_requirements <- function(reqsfile) {
   reqs <- read_list(reqsfile)
   if (`reqs_registered?`(reqs)) {
-    lockfile <- get_lockfile_from_registry(reqs)
+    lockfile <- get_lockfile_from_reqs_registry(reqs)
   } else {
     lockfile <- generate_lockfile(reqs)
     register_requirements(reqs, lockfile)
