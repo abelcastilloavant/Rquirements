@@ -2,7 +2,7 @@ Package: Rquirements
 Type: Package
 Title: Rquirements (http://github.com/abelcastilloavant/Rquirements)
 Description: Package dependency management with automation and introspection.
-Version: 0.0.1.9001
+Version: 0.0.1.9002
 Author: Abel Castillo <abelcastillomath@gmail.com>
 Maintainer: Abel Castillo <abelcastillomath@gmail.com>
 Authors@R: c(person("Abel", "Castillo",
