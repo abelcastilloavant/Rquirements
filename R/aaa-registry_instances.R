@@ -1,7 +1,11 @@
 # we need memoising out here because we want to cache values across different
 # instances of the class
 reqs_registry_filename <- memoise::memoise(function(reqs) {
-  digest::digest(lapply(reqs, `[`, c("name", "version", "source")))
+  # sort reqs before computing digest to make sure
+  # we don't get a different registry key just because we
+  # change the order of its entries
+  pkg_names <- vapply(reqs, `[[`, character(1), "names")
+  digest::digest(lapply(reqs[order(pkg_names)], `[`, c("name", "version", "source")))
 })
 
 REQS_REGISTRY <- ObjectRegistry$new(
