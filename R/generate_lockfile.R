@@ -1,5 +1,5 @@
 generate_lockfile <- function(reqs) {
-  validate_reqs(reqs)
+  reqs     <- validate_reqs(reqs)
   dep_tree <- DependencyTree$new(reqs)
   lockfile <- list(
     requirements       = dep_tree$reqs(),
@@ -15,11 +15,16 @@ generate_lockfile <- function(reqs) {
 }
 
 validate_reqs <- function(reqs) {
-  lapply(reqs, function(x) {
-    if (!all(c("name", "version") %in% names(x))) {
+  lapply(reqs, function(required_pkg) {
+    if (!all(c("name", "version") %in% names(required_pkg))) {
       stop("Your requirements list has an entry that's missing ",
            "either a 'name' or a 'version', but these are needed ",
            "to generate a lockfile. Please fix this.")
     }
+    if (!"source" %in% names(required_pkg)) {
+      # the default source for a package is CRAN
+      required_pkg$source <- "CRAN"
+    }
+    required_pkg
   })
 }
